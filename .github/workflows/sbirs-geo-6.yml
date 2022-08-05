@@ -1,0 +1,18 @@
+name: Fetch SBIRS-GEO-6 data
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+    
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check out repo
+        uses: actions/checkout@v2
+      - name: Fetch data 
+        uses: githubocto/flat@v2
+        with:
+          http_url: http://celestrak.org/NORAD/elements/gp.php?CATNR=53356&FORMAT=TLE
+          downloaded_filename: 53356.txt
+
