@@ -1,9 +1,7 @@
 name: Fetch SBIRS-GEO-6 data
-
 on:
   schedule:
-    - cron: '25 * * * *'
-    
+    - cron: '0 * * * *'
 jobs:
   scheduled:
     runs-on: ubuntu-latest
