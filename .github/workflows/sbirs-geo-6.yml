@@ -2,7 +2,7 @@ name: Fetch SBIRS-GEO-6 data
 
 on:
   schedule:
-    - cron: '15 * * * *'
+    - cron: '25 * * * *'
     
 jobs:
   scheduled:
@@ -13,6 +13,6 @@ jobs:
       - name: Fetch data 
         uses: githubocto/flat@v3
         with:
-          http_url: http://celestrak.org/NORAD/elements/gp.php?CATNR=53356&FORMAT=TLE
-          downloaded_filename: 53356.txt
+          http_url: https://celestrak.com/NORAD/elements/active.txt
+          downloaded_filename: active.txt
 
